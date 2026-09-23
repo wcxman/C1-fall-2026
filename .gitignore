@@ -1,0 +1,5 @@
+.venv
+thorlabs_tsi_camera_python_sdk_package.zip
+dlls/*
+!dlls/README.md
+captures/
