@@ -1,13 +1,15 @@
 # SYSTEM REQUIREMENTS
 * 64-bit Windows Installation
 * Python 3.8 or later
+* Ability to connect two USB-A peripherals to your device
 
 # ONE-TIME SETUP INSTRUCTIONS
-1. Go to https://www.thorlabs.com/software-pages/ThorCam and navigate to the `Programming Interfaces` tab. From there, download the Windows SDK. 
-2. After downloading and unzipping `scientific_camera_interfaces-[VERSION_NUMBER]-[DATE]`, navigate to `scientific_camera_interfaces-[VERSION_NUMBER]-[DATE]\Scientific Camera Interfaces\SDK\Python Toolkit`. In this folder there will be a zip file named `thorlabs_tsi_camera_python_sdk_package.zip`. Copy that zip file into this repository. Do not unzip it. The copied zip file's path should be: `C:\\Path\To\C1-fall-2026\thorlabs_tsi_camera_python_sdk_package.zip`. 
-3. Copy the DLL files found in `scientific_camera_interfaces-[VERSION_NUMBER]-[DATE]\Scientific Camera Interfaces\SDK\Native Toolkit\dlls\Native_64_lib` into the `dlls` folder in this repository. 
-4. In powershell, navigate to this directory with `cd C:\\Path\To\C1-fall-2026`. Next, run `python -m venv .venv`. This initializes a python virtual environment.
-5. Activate the virtual environment by running `.\.venv\Scripts\Activate.ps1` in powershell. After running that command, you will be in the virtual environment. Run `pip install -r requirements.txt` in powershell to install the correct dependency versions in the virtual environment. 
+1. If you haven't already, download this project with `git clone https://github.com/wcxman/C1-fall-2026.git` in the folder you would like to download the project to. 
+2. Go to https://www.thorlabs.com/software-pages/ThorCam and navigate to the `Programming Interfaces` tab. From there, download the Windows SDK. 
+3. After downloading and unzipping `scientific_camera_interfaces-[VERSION_NUMBER]-[DATE]`, navigate to `scientific_camera_interfaces-[VERSION_NUMBER]-[DATE]\Scientific Camera Interfaces\SDK\Python Toolkit`. In this folder there will be a zip file named `thorlabs_tsi_camera_python_sdk_package.zip`. Copy that zip file into this repository. Do not unzip it. The copied zip file's path should be: `C:\\Path\To\C1-fall-2026\thorlabs_tsi_camera_python_sdk_package.zip`. 
+4. Copy the DLL files found in `scientific_camera_interfaces-[VERSION_NUMBER]-[DATE]\Scientific Camera Interfaces\SDK\Native Toolkit\dlls\Native_64_lib` into the `dlls` folder in this repository. 
+5. In powershell, navigate to this directory with `cd C:\\Path\To\C1-fall-2026`. Next, run `python -m venv .venv`. This initializes a python virtual environment.
+6. Activate the virtual environment by running `.\.venv\Scripts\Activate.ps1` in powershell. After running that command, you will be in the virtual environment. Run `pip install -r requirements.txt` in powershell to install the correct dependency versions in the virtual environment. 
 
 # HOW TO USE
 1. Make sure that the above one-time instructions have been completed.
@@ -19,6 +21,6 @@ Note: The image will likely appear to be entirely black. This is because the cam
 - DMD lens to middle of standalone lens is 8.5 cm
 - Standalone lens to pixel array (a bit past filter base) is 6.5 cm
 
-# Upcoming Goals: 
-- Finalize a schematic
-- Finish reconstruction algorithms
+# Acknowledgements 
+- First and foremost, we would like to thank Dr. Charles DiMarzio for overlooking this project and his valuable insight throughout the entire process
+- Francesco Valla for their dlpc350 library, which we are using under LGPL v3. 

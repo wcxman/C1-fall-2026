@@ -1,0 +1,3 @@
+[submodule "dlpc350"]
+	path = dlpc350
+	url = https://github.com/WallaceIT/dlpc350.git
