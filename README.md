@@ -14,8 +14,9 @@
 # HOW TO USE
 1. Make sure that the above one-time instructions have been completed.
 2. In powershell, navigate to this directory with `cd C:\\Path\To\C1-fall-2026` and activate the python virtual environment with `.\.venv\Scripts\Activate.ps1`.
-3. Run `python python/camera.py` to capture a single image. This image will be saved in `captures/capture_[yr]-[mo]-[day]_[hr]-[min]-[sec].tif`. 
-Note: The image will likely appear to be entirely black. This is because the camera we are using captures with 10-bit depth, but we save into a 16-bit TIFF file. In Photoshop, open the .tif file and use the "Auto Contrast" tool. In other photo editors, you may need to adjust the contrast manually. Keep increasing the contrast until you can see the details of the photo! You may need to increase the contrast *a lot* to see the image. 
+3. Run `python python/capture.py` to capture ten images in series. These images will be saved in `captures/capture_[yr]-[mo]-[day]_[hr]-[min]-[sec]-[usec].tif`. 
+
+Note: Because the ThorLabs camera has a 10 bit sensor but most image processing softwares don't accept 10-bit .tif files, we instead cast our 10 bits of data into a 16-bit .tif file. If `shift_left` is passed as true to `capture_image()`, these 10 bits of data will occupy bits 6-15 of a 16-bit pixel value. Otherwise, they will occupy bits 0-9, which results in what appears to be an all-black image. If this image is put into photoshop or another image processing software and auto-contrasted, the expected data will appear.
 
 # Physical setup notes
 - DMD lens to middle of standalone lens is 8.5 cm
