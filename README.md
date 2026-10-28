@@ -18,10 +18,17 @@
 
 Note: Because the ThorLabs camera has a 10 bit sensor but most image processing softwares don't accept 10-bit .tif files, we instead cast our 10 bits of data into a 16-bit .tif file. If `shift_left` is passed as true to `capture_image()`, these 10 bits of data will occupy bits 6-15 of a 16-bit pixel value. Otherwise, they will occupy bits 0-9, which results in what appears to be an all-black image. If this image is put into photoshop or another image processing software and auto-contrasted, the expected data will appear.
 
-# Physical setup notes
+# CONTRIBUTING
+Thank you for contributing to this project! Some guidelines are given below:
+* If new python code adds dependencies, reflect this in `requirements.txt`. Run `pip freeze > requirements2.txt` to generate a new requirements text file, then replace everything but the line containing `./thorlabs_tsi_camera_python_sdk_package.zip` with every line in `requirements2.txt` except the line containing that zip file. Afterwards, make sure to delete `requirements2.txt` or whatever intermediate file you use. 
+* Any artifacts from code execution, such as captures, cache files, etc. should be added to `.gitignore` so they are not pushed to the repository. This keeps the repository clean!
+
+
+# Physical setup notes !TODO: REMOVE THIS?
 - DMD lens to middle of standalone lens is 8.5 cm
 - Standalone lens to pixel array (a bit past filter base) is 6.5 cm
 
 # Acknowledgements 
-- First and foremost, we would like to thank Dr. Charles DiMarzio for overlooking this project and his valuable insight throughout the entire process
+- First and foremost, we would like to thank Dr. Charles DiMarzio for overlooking this project and his valuable insight throughout the entire process. 
+- Eric Hall for all of his help in the lab and with the reconstruction algorithm.
 - Francesco Valla for their dlpc350 library, which we are using under LGPL v3. 
