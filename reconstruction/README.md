@@ -1,0 +1,1 @@
+Temporary files for testing port of Eric's partial SIM algorithm. These should eventually be integrated into the python folder, without the duck test image.
